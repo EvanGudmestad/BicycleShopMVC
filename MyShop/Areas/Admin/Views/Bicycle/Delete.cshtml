@@ -1,0 +1,12 @@
+﻿@model MyShop.Models.Bicycle
+@{
+    ViewBag.Title = "Admin Bicycle Delete";
+}
+
+<h1>Are you sure you want to delete? @Model.Slug </h1>
+<form asp-controller="bicycle" asp-action="DeleteBike" asp-method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" />"
+
+</form>
+

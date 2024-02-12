@@ -1,0 +1,60 @@
+﻿@model List<MyShop.Models.Bicycle>
+
+@{
+    ViewBag.Title = "Bicycle List";
+}
+
+<h1>Bicycle List</h1>
+<div class="row">
+    <div class="col-md-2">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a asp-controller="Bicycle" asp-action="List" asp-route-brand="trek" class="nav-link">Trek</a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Bicycle" asp-action="List" asp-route-brand="specialized" class="nav-link">Specialized</a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Bicycle" asp-action="List" asp-route-brand="cannondale" class="nav-link">Cannondale</a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Bicycle" asp-action="List" asp-route-brand="Giant" class="nav-link">Giant</a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <table class="table table-info table-striped">
+            <tr>
+                <th>
+                    Brand
+                </th>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Price
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <a asp-controller="Bicycle" asp-action="Details" asp-route-id="@item.Id" asp-route-slug="@item.Slug">Details</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model MyShop.Models.Bicycle
+
+@{
+    ViewBag.Title = "Bicycle Details";
+}
+
+<h1>Bike Details</h1>
+
+
+@* Brand = "Trek",
+                  Model = "FX 1",
+                  Year = 2022,
+                  Type = "Hybrid",
+                  Price = 450.00m,
+                  Color = "Black",
+                  ImageFileName = "trek-fx1-black.jpg" *@
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="@Model.ImageFileName" class="card-img-top" alt="...">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Model.Brand</li>
+                    <li class="list-group-item">@Model.Model</li>
+                    <li class="list-group-item">@Model.Type</li>
+                    <li class="list-group-item">@Model.Price?.ToString("C")</li>
+                    <li class="list-group-item">@Model.Color</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>

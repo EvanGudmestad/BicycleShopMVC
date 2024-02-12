@@ -1,0 +1,42 @@
+﻿@model MyShop.Models.Bicycle
+@{
+    ViewBag.Title = "Admin Bicycle Add/Edit";
+}
+@*  Brand = "Trek",
+                  Model = "FX 1",
+                  Year = 2022,
+                  Type = "Hybrid",
+                  Price = 450.00m,
+                  Color = "Black",
+                  ImageFileName = "trek-fx1-black.jpg" *@
+
+<h1>Admin Bicycle Add/Edit</h1>
+<div asp-validation-summary="All"></div>
+<form asp-controller="Bicycle" asp-action="Add" method="post">
+
+    <div class="form-floating mb-3">
+        <input asp-for=Brand class="form-control" id="floatingBrand" placeholder="Brand">
+        <label asp-for=Brand for="floatingBrand">Brand</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for=Model class="form-control" id="floatingModel" placeholder="Model">
+        <label asp-for=Model for="floatingBrand">Model</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for=Year class="form-control" id="floatingYear" placeholder="Year">
+        <label asp-for=Year for="floatingBrand">Year</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for=Type class="form-control" id="floatingYear" placeholder="Type">
+        <label asp-for=Type for="floatingBrand">Type</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for=Price class="form-control" id="floatingYear" placeholder="Price">
+        <label asp-for=Price for="floatingBrand">Price</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for=Color class="form-control" id="floatingYear" placeholder="Color">
+        <label asp-for=Color for="floatingBrand">Color</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
