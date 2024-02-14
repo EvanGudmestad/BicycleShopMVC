@@ -35,7 +35,12 @@
                 <th>
                     Price
                 </th>
-                <th></th>
+                <th>
+                    Edit
+                </th>
+                <th>
+                    Delete
+                </th>
             </tr>
 
             @foreach (var item in Model)
@@ -51,10 +56,10 @@
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                     <td>
-                        <a asp-controller="Bicycle" asp-action="Add" asp-route-id=@item.Id>Edit Bike</a>
+                        <a asp-controller="Bicycle" asp-action="Add" asp-route-id=@item.Id class="btn btn-warning">Edit Bike</a>
                     </td>
                     <td>
-                        <a asp-controller="Bicycle" asp-action="Delete" asp-route-id=@item.Id>Delete Bike</a>
+                        <a asp-controller="Bicycle" asp-action="Delete" asp-route-id=@item.Id class="btn btn-danger">Delete Bike</a>
                     </td>
                 </tr>
             }

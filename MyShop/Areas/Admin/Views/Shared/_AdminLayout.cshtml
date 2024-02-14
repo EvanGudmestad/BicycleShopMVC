@@ -1,10 +1,13 @@
 ﻿@{
     Layout="_Layout";
+    string c = ViewContext.RouteData.Values["controller"].ToString() ?? "";
+    string a = ViewContext.RouteData.Values["action"].ToString() ?? "";
+    string area = ViewContext.RouteData.Values["area"].ToString() ?? "";
 }
 
 
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyShop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -14,12 +17,14 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Main Site</a>
+                        <a class="nav-link @(area=="Admin" && c=="Home" && a=="Index" ? "active" : "")" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Bicycle" asp-action="List" asp-route-brand="all">Bicycles</a>
+                        <a class="nav-link @(c=="Bicycle" && a=="List" ? "active" : "")" asp-area="Admin" asp-controller="Bicycle" asp-action="List" asp-route-brand="all">Bicycles</a>
                     </li>
-                    
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link @(area == "" && c=="Home" && a=="Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Main Site</a>
+                    </li>
                 </ul>
             </div>
         </div>
