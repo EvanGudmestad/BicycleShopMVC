@@ -35,3 +35,6 @@
         @RenderBody()
     </main>
 </div>
+ @section scripts{
+     @await RenderSectionAsync("scripts", required: false)
+  }
