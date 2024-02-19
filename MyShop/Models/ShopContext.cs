@@ -69,62 +69,6 @@ namespace MyShop.Models
                     Price = 550.00m,
                     Color = "Green",
                     ImageFileName = "trek-marlin-green.jpg"
-                },
-                new Bicycle
-                {
-                    Id = 6,
-                    Brand = "Giant",
-                    Model = "Escape 3",
-                    Year = 2023,
-                    Type = "Hybrid",
-                    Price = 400.00m,
-                    Color = "Silver",
-                    ImageFileName = "giant-escape-silver.jpg"
-                },
-                new Bicycle
-                {
-                    Id = 7,
-                    Brand = "Specialized",
-                    Model = "Sirrus X 3.0",
-                    Year = 2022,
-                    Type = "Hybrid",
-                    Price = 700.00m,
-                    Color = "Black",
-                    ImageFileName = "specialized-sirrus-black.jpg"
-                },
-                new Bicycle
-                {
-                    Id = 8,
-                    Brand = "Cannondale",
-                    Model = "Topstone Carbon Lefty 3",
-                    Year = 2023,
-                    Type = "Gravel",
-                    Price = 3000.00m,
-                    Color = "Orange",
-                    ImageFileName = "cannondale-topstone-orange.jpg"
-                },
-                new Bicycle
-                {
-                    Id = 9,
-                    Brand = "Trek",
-                    Model = "Domane SL 5",
-                    Year = 2023,
-                    Type = "Road",
-                    Price = 2500.00m,
-                    Color = "Blue",
-                    ImageFileName = "trek-domane-blue.jpg"
-                },
-                new Bicycle
-                {
-                    Id = 10,
-                    Brand = "Giant",
-                    Model = "Talon 29 3",
-                    Year = 2022,
-                    Type = "Mountain",
-                    Price = 700.00m,
-                    Color = "Yellow",
-                    ImageFileName = "giant-talon-yellow.jpg"
-
                 }
              );
         }
